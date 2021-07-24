@@ -1,0 +1,9 @@
+.bg-colum {
+    background-color: rgb(179, 179, 179); opacity:1.0;
+    border-right: 2px solid rgb(160, 160, 160);
+}
+
+.bg-nav {
+    background-color: rgb(175, 39, 39); opacity:1.0;
+    border-bottom: 2px solid rgb(160, 160, 160);
+}
