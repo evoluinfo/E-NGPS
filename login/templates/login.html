@@ -24,16 +24,24 @@
             <section>
                 <div class="col-md-4 px-5" style="position: absolute; margin-top: 14%;">
                     <div class="login-form">
-                        <form>
+                        <form method="post">
+                            {% csrf_token %}
+                        
                             <div class="form-group">
-                                <label>Usuário</label>
-                                <input type="text" class="form-control" placeholder="seu usuário">
+                                {{form_login.username.errors}}
+                                <label>Username: </label>
+                                {{form_login.username}}
                             </div>
+                        
                             <div class="form-group">
-                                <label>Senha</label>
-                                <input type="password" class="form-control" placeholder="sua senha"> <br>
+                                {{form_login.password.errors}}
+                                <label>Senha: </label>
+                                {{form_login.password}}
                             </div>
-                            <button type="submit" class="btn btn-success">Login</button>
+                        
+                            <div class="form-group">
+                                <input type="submit" value="Enviar" class="btn btn-success">
+                            </div>
                         </form>
                     </div>
                 </div>
@@ -47,4 +55,4 @@
 
     </div>
 </div>
-{% endblock %}
+{% endblock %} 
