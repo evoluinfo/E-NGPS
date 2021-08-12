@@ -8,6 +8,29 @@
     border-bottom: 2px solid rgb(160, 160, 160);
 }
 
-.bg-login{
+.bg-login-rigth{
     background-color: rgb(136, 0, 0);
+    color: white;
+}
+
+.bg-login-left{
+    background-color: rgba(255, 255, 255, 0.925);
+    border-right: 2px solid #333;
+}
+
+.bg-login-left-image{
+    display: flex;
+    position: absolute;
+    margin-top: 220px;
+    margin-left: 1px;
+}
+
+.div-copyright{
+    position: absolute;
+    margin-top: 43%;
+}
+
+.div-login-input{
+    position: absolute;
+    margin-top: 14%;
 }
