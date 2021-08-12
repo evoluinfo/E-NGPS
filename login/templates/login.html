@@ -3,11 +3,11 @@
 
 <div class="vh-100">
 
-    <div class="d-flex" style="height:100%">
+    <div class="d-flex h-100">
 
-        <nav class="col-4 " style="background-color: rgba(255, 255, 255, 0.925); border-right: 2px solid #333;">
-            <div style="display: flex; position: absolute; margin-top: 220px; margin-left: 1px;">
-                <img src="../../static/img/Nutri-Gourmet-LOGO-1-removebg-preview.png" alt="" width="500px" />
+        <nav class="col-4 bg-login-left">
+            <div class="bg-login-left-image">
+                <img src="../../static/img/Nutri-Gourmet-LOGO-1-removebg-preview.png" alt=""/>
             </div>
             <ul class="navbar-nav flex-column fw-bold py-3">
                 <li class="nav-item">
@@ -19,10 +19,10 @@
             </ul>
         </nav>
 
-        <main class="col-8 px-3 py-4 text-white" style="background-color: rgb(136, 0, 0);">
+        <main class="col-8 px-3 py-4 bg-login-rigth">
             
             <section>
-                <div class="col-md-4 px-5" style="position: absolute; margin-top: 14%;">
+                <div class="px-5 div-login-input">
                     <div class="login-form">
                         <form method="post">
                             {% csrf_token %}
@@ -47,8 +47,8 @@
                 </div>
             </section>
 
-            <div class="col-md-6 px-4" style="position: absolute; margin-top: 45%;">
-                <h6>Copyright © 2020 EvoluInfo Informática. Todos os direitos reservados.</h6>
+            <div class="col-md-6 px-4 div-copyright" >
+                <h6>Copyright © 2021 EvoluInfo Informática. Todos os direitos reservados.</h6>
             </div>
 
         </main>
