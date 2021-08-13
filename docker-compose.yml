@@ -12,14 +12,3 @@ services:
             - ./:/var/www
         ports: 
             - 8000:8000
-            
-    # database:
-    #     image: postgres:9.5
-    #     environment:
-    #         - POSTGRES_DB=postgres
-    #         - POSTGRES_USER=postgres
-    #         - POSTGRES_PASSWORD=postgres
-    #     ports:
-    #         - "5470:5432"
-    #     networks: 
-    #         - servicenetwork
