@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% block content %}
+<div>
+    <div class="col-8 m-auto pt-2 pb-2 text-center">
+        <h1>Visualização do Cliente</h1>
+    </div>
+    <div class="col-8 m-auto pt-3 pb-2 text-center">
+        <a href="/client" class="btn btn-info">Voltar</a>
+    </div>
+    <div class="col-8 m-auto pt-4 pb-2 text-center">
+        <strong>Empresa </strong>{{db.company_name}}<br>
+        <strong>Responsável: </strong>{{db.responsible}}<br>
+        <strong>Setor: </strong>{{db.department}}<br>
+        <strong>E-mail: </strong>{{db.email}}<br>
+        <strong>Telefone: </strong>{{db.phone}}<br>
+        <strong>Cidade: </strong>{{db.city}}<br>
+        <strong>Estado: </strong>{{db.state}}<br>
+        <strong>Modalidade: </strong>{{db.modality}}<br>
+        <strong>N° Serviços: </strong>{{db.n_service}}<br>
+        <strong>Preço: </strong>{{db.price}}<br>
+        <strong>Fat. Médio: </strong>{{db.avarage_billing}}<br>
+        <strong>Aniver. Contrato: </strong>{{db.contract_anniversary}}<br>
+        <strong>Proposta: </strong>{{db.proposal}}<br>
+        <strong>Histórico: </strong>{{db.historic}}<br>
+        <strong>Atualização: </strong>{{db.date_update}}<br>
+    </div>
+    </tbody>
+    </table>
+</div>
+
+<script src="../../static/javascript/index.js"></script>
+</div>
+
+
+{%endblock%}

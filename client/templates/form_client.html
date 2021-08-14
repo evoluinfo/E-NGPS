@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<main>
+    <div class="col-8 m-auto pt-3 pb-2 text-center">
+        <h1>Formulario de Cliente</h1>
+    </div>
+    <div class="col-8 m-auto pt-2 pb-2 text-center">
+        <div class="col-8 m-auto pt-2 pb-2 text-center">
+            <a href="/app/" class="btn btn-outline-dark">Voltar</a>
+            <a href="/app/client/form_client/" class="btn btn-outline-dark">Limpar</a>
+        </div>
+    </div>
+
+    <div class=" m-auto text-center" id="result"></div>
+    <form class="form-control form-control-lg" name="form" id="form"
+        action="{% if db %}/update_client/{{db.id}}/{%else%}/create_client/{% endif %}" method="post">
+        {% csrf_token %}
+        <div class="col-8 m-auto pt-2 pb-2 text-center">
+            <label for="bank_name" class="form-label">Empresa</label>
+            <div><i class="form-control-lg" id="company_name" placeholder="Empresa">{{form_client.company_name}}</i></div>
+    
+            <label for="bank_name" class="form-label">Responsável</label>
+            <div><i class="form-control-lg" id="responsible" placeholder="Responsável">{{form_client.responsible}}</i></div>
+    
+            <label for="bank_name" class="form-label">Setor</label>
+            <div><i class="form-control-lg" id="department" placeholder="Setor">{{form_client.department}}</i></div>
+    
+            <label for="bank_name" class="form-label">E-mail</label>
+            <div><i class="form-control-lg" id="email" placeholder="E-mail">{{form_client.email}}</i></div>
+    
+            <label for="bank_name" class="form-label">Telefone</label>
+            <div><i class="form-control-lg" id="phone" placeholder="Telefone">{{form_client.phone}}</i></div>
+    
+            <label for="bank_name" class="form-label">Cidade</label>
+            <div><i class="form-control-lg" id="city" placeholder="Cidade">{{form_client.city}}</i></div>
+    
+            <label for="bank_name" class="form-label">Estado</label>
+            <div><i class="form-control-lg" id="state" placeholder="Estado">{{form_client.state}}</i></div>
+    
+            <label for="bank_name" class="form-label">Modalidade</label>
+            <div><i class="form-control-lg" id="modality" placeholder="Modalidade">{{form_client.modality}}</i></div>
+    
+            <label for="bank_name" class="form-label">N° Serviços</label>
+            <div><i class="form-control-lg" id="n_service" placeholder="N° Serviços">{{form_client.n_service}}</i></div>
+    
+            <label for="bank_name" class="form-label">Preço</label>
+            <div><i class="form-control-lg" id="price" placeholder="Preço">{{form_client.price}}</i></div>
+    
+            <label for="bank_name" class="form-label">Faturamento Médio</label>
+            <div><i class="form-control-lg" id="avarage_billing"
+                    placeholder="Faturamento Médio">{{form_client.avarage_billing}}</i></div>
+    
+            <label for="bank_name" class="form-label">Aniverśario Contrato</label>
+            <div><i class="form-control-lg" id="contract_anniversary"
+                    placeholder="Aniverśario Contrato">{{form_client.contract_anniversary}}</i></div>
+    
+            <label for="bank_name" class="form-label">Proposta</label>
+            <div><i class="form-control-lg" id="proposal" placeholder="Proposta">{{form_client.proposal}}</i></div>
+    
+            <label for="bank_name" class="form-label">Histórico</label>
+            <div><i class="form-control-lg" id="historic" placeholder="Histórico">{{form_client.historic}}</i></div>
+    
+            <div><br></div>
+            <input type="submit" class="btn btn-outline-primary" value="Salvar">
+        </div>
+    </form>
+
+    <script src="../../static/javascript/index.js"></script>
+    </div>
+</main>
+
+{%endblock%}

@@ -22,11 +22,11 @@ class Seller(models.Model):
     n_service = models.PositiveBigIntegerField(verbose_name='n° serviços')
     price = models.FloatField(verbose_name='preço')
     avarage_billing = models.FloatField(verbose_name='faturamento médio')
-    contract_anniversary = models.DateField(verbose_name='contrato aniversário')
-    proposal = models.DateField(verbose_name='proposta', blank=True)
-    historic = models.TextField(verbose_name='histórico', blank=True)
-    date_created = models.DateTimeField(verbose_name='criação', auto_now_add=True)
-    date_update = models.DateTimeField(verbose_name='atualização', auto_now=True)
+    contract_anniversary = models.DateField(verbose_name='contrato aniversário', null=True)
+    proposal = models.DateField(verbose_name='proposta', blank=True, null=True)
+    historic = models.TextField(verbose_name='histórico', blank=True, null=True)
+    date_created = models.DateTimeField(verbose_name='criação', auto_now_add=True, null=True)
+    date_update = models.DateTimeField(verbose_name='atualização', auto_now=True, null=True)
 
     def __str__(self) -> str:
         return f"{self.company_name} - {self.responsible} - {self.department} -\
